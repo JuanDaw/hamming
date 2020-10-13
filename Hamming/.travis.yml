@@ -1,0 +1,19 @@
+# Travis CI configuration file.
+
+dist: trusty
+
+sudo: false
+
+language: php
+
+php:
+    - 7.1
+
+before_install: phpenv config-rm xdebug.ini
+
+script:
+    - make
+
+notifications:
+    email: false
+
