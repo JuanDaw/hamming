@@ -7,7 +7,7 @@
  */
 
  /**
-  * Este programa calcula la distancia hamming entre dos cadenas
+  * Este programa calcula la distancia hamming entre dos cadenas.
   */
 
 function distancia($a, $b)
@@ -20,14 +20,7 @@ function distancia($a, $b)
         return 0;
     }
 
-    $sol = 0;
-    for ($i=0; $i < mb_strlen($a); $i++) { 
-        for ($j=0; $j < mb_strlen($b); $j++) { 
-            if ($a[$i] = $b[$j]) {
-                $sol += 1;
-            }
-        }
-    }
+    $sol = array_diff_assoc(mb_str_split($a), mb_str_split($b));
 
-    return $sol;
+    return count($sol);
 }
