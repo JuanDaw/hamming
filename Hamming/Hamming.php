@@ -8,8 +8,10 @@
 
  /**
   * Este programa calcula la distancia hamming entre dos cadenas.
+  * @param string $a. La primera cadena.
+  * @param string $b. La segunda cadena. 
+  * @return int|bool. El número de caracteres distintos, o false si tiene distinta longitud
   */
-
 function distancia($a, $b)
 {
     if (mb_strlen($a) != mb_strlen($b)) {
